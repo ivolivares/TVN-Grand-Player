@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "TV(n) Grand Player",
+    "version": "0.1",
+
+    "description": "Cambia el reproductor de TV(n) de a pantalla completa para evitar ser distraído en tu programación favorita.",
+    "icons": {
+        "128": "icon_128.gif"
+    },
+
+    "author": "Iván Olivares R. (@ivolivares)",
+    "permissions": [
+    	"http://*.tvn.cl/player/play/*"
+	],
+    "offline_enabled": false,
+    "content_scripts": [
+		{
+		  "matches": [
+		  	"http://*.tvn.cl/player/play/*"
+	  	],
+		  "css": ["css.css"],
+		  "js": ["jquery.js", "sc.js"]
+		}
+	]
+}
